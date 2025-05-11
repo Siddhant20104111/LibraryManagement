@@ -1,12 +1,12 @@
 package com.harvard.libraryManagement.entity;
 
 
-import com.harvard.libraryManagement.entity.enums.TransactionStatus;
+import com.harvard.libraryManagement.enums.TransactionStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
-
+@Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor

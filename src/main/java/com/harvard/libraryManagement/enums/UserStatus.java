@@ -1,4 +1,4 @@
-package com.harvard.libraryManagement.entity.enums;
+package com.harvard.libraryManagement.enums;
 
 public enum UserStatus {
     ACTIVE,

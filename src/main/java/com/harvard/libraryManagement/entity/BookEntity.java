@@ -1,11 +1,11 @@
 package com.harvard.libraryManagement.entity;
 
-import com.harvard.libraryManagement.entity.enums.BookType;
+import com.harvard.libraryManagement.enums.BookType;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
-
+@Data
 @Getter
 @Setter
 @Entity

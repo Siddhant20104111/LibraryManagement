@@ -1,27 +1,35 @@
 package com.harvard.libraryManagement.entity;
 
-import com.harvard.libraryManagement.entity.enums.BookType;
-import com.harvard.libraryManagement.entity.enums.UserStatus;
-import com.harvard.libraryManagement.entity.enums.UserType;
-import jakarta.persistence.*;
-import lombok.*;
+import com.harvard.libraryManagement.enums.UserStatus;
+import com.harvard.libraryManagement.enums.UserType;
 
-import java.util.Date;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Transient;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
 
-@Getter
-@Setter
-@Entity
+@Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
-@Builder
+@Entity
 public class UserEntity extends TimeStamps{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer Id;
+    private Integer id;
 
     @Column(length = 50)
     private String name;
@@ -48,5 +56,9 @@ public class UserEntity extends TimeStamps{
 
     @OneToMany(mappedBy = "user")
     private List<TransactionEntity> transactions;
+
+
+
+
 }
 
